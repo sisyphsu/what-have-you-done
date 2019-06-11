@@ -1,8 +1,6 @@
 package main
 
 import (
-	"fmt"
-
 	"github.com/robotn/gohook"
 )
 
@@ -11,6 +9,9 @@ func main() {
 	defer hook.End()
 
 	for ev := range EvChan {
-		fmt.Println(ev)
+		switch ev.Kind {
+		case hook.KeyUp:
+			println(ev.Keycode, ev.Rawcode)
+		}
 	}
 }
