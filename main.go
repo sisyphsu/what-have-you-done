@@ -13,7 +13,7 @@ func main() {
 
 	goxui.Init()
 	goxui.BindObject(root)
-	goxui.StartRelative("view", "hook.qml")
+	goxui.StartRelative("view/hook.qml")
 
 	root.Close()
 }
