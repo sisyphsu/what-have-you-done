@@ -14,8 +14,9 @@ func TestKeyStat(t *testing.T) {
 	for ev := range EvChan {
 		switch ev.Kind {
 		case hook.KeyUp:
-			keyStat.Record(ev.Keycode)
-			println(ev.Keycode, keyStat.keyMap[ev.Keycode])
+			key := KeyCodeMap[ev.Keycode]
+			keyStat.Record(key)
+			println(key)
 		}
 	}
 

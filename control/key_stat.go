@@ -1,9 +1,12 @@
 package control
 
-import "time"
+import (
+	"github.com/sisyphsu/goxui"
+	"time"
+)
 
 type KeyItem struct {
-	code      uint16
+	name      string
 	minuteMap map[int]int
 }
 
@@ -27,29 +30,31 @@ func (s *KeyItem) culCount(minute int) (count int) {
 
 type KeyStat struct {
 	Minutes int
-	keyMap  map[uint16]int
-	statMap map[uint16]*KeyItem
+	keyMap  map[string]int
+	statMap map[string]*KeyItem
 }
 
 func NewKeyStat() *KeyStat {
 	return &KeyStat{
 		Minutes: 60,
-		keyMap:  make(map[uint16]int),
-		statMap: make(map[uint16]*KeyItem),
+		keyMap:  make(map[string]int),
+		statMap: make(map[string]*KeyItem),
 	}
 }
 
-func (k *KeyStat) Record(code uint16) {
-	stat := k.statMap[code]
+func (k *KeyStat) Record(key string) {
+	stat := k.statMap[key]
 	if stat == nil {
-		stat = &KeyItem{code: code, minuteMap: make(map[int]int)}
-		k.statMap[code] = stat
+		stat = &KeyItem{name: key, minuteMap: make(map[int]int)}
+		k.statMap[key] = stat
 	}
 	stat.record()
-
-	k.keyMap[code] = stat.culCount(k.Minutes)
+	// flush count
+	newCount := stat.culCount(k.Minutes)
+	k.keyMap[key] = newCount
+	goxui.TriggerEvent("count_change_"+stat.name, newCount)
 }
 
-func (k *KeyStat) GetStat(keycode uint16) int {
-	return k.keyMap[keycode]
+func (k *KeyStat) GetStat(key string) int {
+	return k.keyMap[key]
 }

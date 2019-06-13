@@ -2,6 +2,7 @@ package main
 
 import (
 	"github.com/robotn/gohook"
+	"github.com/sisyphsu/what-have-you-done/control"
 )
 
 func main() {
@@ -11,7 +12,7 @@ func main() {
 	for ev := range EvChan {
 		switch ev.Kind {
 		case hook.KeyUp:
-			println(ev.Keycode, ev.Rawcode)
+			println(ev.Keycode, hook.RawcodetoKeychar(ev.Rawcode), control.KeyCodeMap[ev.Keycode])
 		}
 	}
 }
