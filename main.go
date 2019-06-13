@@ -1,18 +1,19 @@
 package main
 
 import (
-	"github.com/robotn/gohook"
+	"github.com/sisyphsu/goxui"
 	"github.com/sisyphsu/what-have-you-done/control"
+	"runtime"
 )
 
 func main() {
-	EvChan := hook.Start()
-	defer hook.End()
+	runtime.LockOSThread()
 
-	for ev := range EvChan {
-		switch ev.Kind {
-		case hook.KeyUp:
-			println(ev.Keycode, hook.RawcodetoKeychar(ev.Rawcode), control.KeyCodeMap[ev.Keycode])
-		}
-	}
+	root := control.NewRoot()
+
+	goxui.Init()
+	goxui.BindObject(root)
+	goxui.StartRelative("view", "hook.qml")
+
+	root.Close()
 }
