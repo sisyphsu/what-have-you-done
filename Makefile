@@ -13,3 +13,5 @@ build:
 	qrc2go $(current_dir)/view
 	# compile exe
 	go build -o $(TARGET) -v
+	# clear rcc
+	rm $(current_dir)/view/ui.go

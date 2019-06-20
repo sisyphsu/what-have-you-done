@@ -1,7 +1,7 @@
 package control
 
 import (
-	"github.com/sisyphsu/goxui"
+	"github.com/go-eden/goxui"
 	"time"
 )
 
