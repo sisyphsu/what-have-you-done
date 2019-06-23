@@ -1,9 +1,12 @@
 import QtQuick 2.12
+import Goxui 1.0
+
 import "./key"
 
-Item {
+TitleBar {
     anchors.fill: parent
-    KeyBoard{
+    anchors.margins: 3
+    KeyBoard {
         width: parent.width
     }
 }

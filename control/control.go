@@ -20,6 +20,8 @@ func (r *Root) deamonHook() {
 	for ev := range EvChan {
 		switch ev.Kind {
 		case hook.KeyUp:
+			key := KeyCodeMap[ev.Keycode]
+			r.KeyStat.record(key)
 		}
 	}
 }

@@ -2,119 +2,119 @@ import QtQuick 2.12
 
 Column {
 
-    property double size: 40
+    id: root
 
     KeyRow {
         height: 40
         KeyButton {
             label: "Esc"
-            code: 27
+            code: "VC_ESCAPE"
         }
         KeyButton {
             label: "F1"
-            code: 0
+            code: "VC_F1"
         }
         KeyButton {
             label: "F2"
-            code: 0
+            code: "VC_F2"
         }
         KeyButton {
             label: "F3"
-            code: 0
+            code: "VC_F3"
         }
         KeyButton {
             label: "F4"
-            code: 0
+            code: "VC_F4"
         }
         KeyButton {
             label: "F5"
-            code: 0
+            code: "VC_F5"
         }
         KeyButton {
             label: "F6"
-            code: 0
+            code: "VC_F6"
         }
         KeyButton {
             label: "F7"
-            code: 0
+            code: "VC_F7"
         }
         KeyButton {
             label: "F8"
-            code: 0
+            code: "VC_F8"
         }
         KeyButton {
             label: "F9"
-            code: 0
+            code: "VC_F9"
         }
         KeyButton {
             label: "F10"
-            code: 0
+            code: "VC_F10"
         }
         KeyButton {
             label: "F11"
-            code: 0
+            code: "VC_F11"
         }
         KeyButton {
             label: "F12"
-            code: 0
+            code: "VC_F12"
         }
     }
     KeyRow {
         KeyButton {
             label: "~"
-            code: 192
+            code: "VC_BACKQUOTE"
         }
         KeyButton {
             label: "1"
-            code: 49
+            code: "VC_1"
         }
         KeyButton {
             label: "2"
-            code: 50
+            code: "VC_2"
         }
         KeyButton {
             label: "3"
-            code: 51
+            code: "VC_3"
         }
         KeyButton {
             label: "4"
-            code: 52
+            code: "VC_4"
         }
         KeyButton {
             label: "5"
-            code: 53
+            code: "VC_5"
         }
         KeyButton {
             label: "6"
-            code: 54
+            code: "VC_6"
         }
         KeyButton {
             label: "7"
-            code: 55
+            code: "VC_7"
         }
         KeyButton {
             label: "8"
-            code: 56
+            code: "VC_8"
         }
         KeyButton {
             label: "9"
-            code: 57
+            code: "VC_9"
         }
         KeyButton {
             label: "0"
-            code: 48
+            code: "VC_0"
         }
         KeyButton {
             label: "-"
-            code: 189
+            code: "VC_MINUS"
         }
         KeyButton {
             label: "+"
-            code: 187
+            code: "VC_EQUALS"
         }
         KeyButtonWide {
             label: "Delete"
-            code: 8
+            code: "VC_BACKSPACE"
             size: 1.5
             align: Text.AlignRight
         }
@@ -122,222 +122,249 @@ Column {
     KeyRow {
         KeyButtonWide {
             label: "Tab"
+            code: "VC_TAB"
             size: 1.4
-            code: 9
             align: Text.AlignLeft
         }
         KeyButton {
             label: "Q"
-            code: 81
+            code: "VC_Q"
         }
         KeyButton {
             label: "W"
-            code: 87
+            code: "VC_W"
         }
         KeyButton {
             label: "E"
-            code: 69
+            code: "VC_E"
         }
         KeyButton {
             label: "R"
-            code: 82
+            code: "VC_R"
         }
         KeyButton {
             label: "T"
-            code: 84
+            code: "VC_T"
         }
         KeyButton {
             label: "Y"
-            code: 89
+            code: "VC_Y"
         }
         KeyButton {
             label: "U"
-            code: 85
+            code: "VC_U"
         }
         KeyButton {
             label: "I"
-            code: 73
+            code: "VC_I"
         }
         KeyButton {
             label: "O"
-            code: 79
+            code: "VC_O"
         }
         KeyButton {
             label: "P"
-            code: 80
+            code: "VC_P"
         }
         KeyButton {
             label: "["
-            code: 219
+            code: "VC_OPEN_BRACKET"
         }
         KeyButton {
             label: "]"
-            code: 221
+            code: "VC_CLOSE_BRACKET"
         }
         KeyButton {
             label: "\\"
-            code: 220
+            code: "VC_BACK_SLASH"
         }
     }
     KeyRow {
         KeyButtonWide {
             label: "Caps Lock"
+            code: "VC_CAPS_LOCK"
             size: 1.6
-            code: 20
             align: Text.AlignLeft
         }
         KeyButton {
             label: "A"
-            code: 65
+            code: "VC_A"
         }
         KeyButton {
             label: "S"
-            code: 83
+            code: "VC_S"
         }
         KeyButton {
             label: "D"
-            code: 68
+            code: "VC_D"
         }
         KeyButton {
             label: "F"
-            code: 70
+            code: "VC_F"
         }
         KeyButton {
             label: "G"
-            code: 71
+            code: "VC_G"
         }
         KeyButton {
             label: "H"
-            code: 72
+            code: "VC_H"
         }
         KeyButton {
             label: "J"
-            code: 74
+            code: "VC_J"
         }
         KeyButton {
             label: "K"
-            code: 75
+            code: "VC_K"
         }
         KeyButton {
             label: "L"
-            code: 76
+            code: "VC_L"
         }
         KeyButton {
             label: ";"
-            code: 186
+            code: "VC_SEMICOLON"
         }
         KeyButton {
             label: "'"
-            code: 222
+            code: "VC_QUOTE"
         }
         KeyButtonWide {
             label: "Enter"
+            code: "VC_ENTER"
             size: 1.6
-            code: 13
             align: Text.AlignRight
         }
     }
     KeyRow {
         KeyButtonWide {
             label: "Shift"
+            code: "VC_SHIFT_L"
             size: 2
-            code: 16
             align: Text.AlignLeft
         }
         KeyButton {
             label: "Z"
-            code: 90
+            code: "VC_Z"
         }
         KeyButton {
             label: "X"
-            code: 88
+            code: "VC_X"
         }
         KeyButton {
             label: "C"
-            code: 67
+            code: "VC_C"
         }
         KeyButton {
             label: "V"
-            code: 86
+            code: "VC_V"
         }
         KeyButton {
             label: "B"
-            code: 66
+            code: "VC_B"
         }
         KeyButton {
             label: "N"
-            code: 78
+            code: "VC_N"
         }
         KeyButton {
             label: "M"
-            code: 77
+            code: "VC_M"
         }
         KeyButton {
             label: ","
-            code: 188
+            code: "VC_COMMA"
         }
         KeyButton {
             label: "."
-            code: 190
+            code: "VC_PERIOD"
         }
         KeyButton {
             label: "/"
-            code: 191
+            code: "VC_SLASH"
         }
         KeyButtonWide {
             label: "Shift"
+            code: "VC_SHIFT_R"
             size: 2
-            code: -16
             align: Text.AlignRight
         }
     }
     KeyRow {
-        KeyButton{
+        KeyButton {
             label: "Control"
+            code: "VC_CONTROL_L"
             size: 1.3
-            code: 17
         }
-        KeyButton{
+        KeyButton {
             label: "Option"
+            code: "VC_ALT_L"
             size: 1.3
-            code: 18
         }
-        KeyButton{
+        KeyButton {
             label: "Command"
+            code: "VC_META_L"
             size: 1.5
-            code: 91
         }
-        KeyButton{
+        KeyButton {
             label: ""
+            code: "VC_SPACE"
             size: 5
-            code: 32
         }
-        KeyButton{
+        KeyButton {
             label: "Command"
+            code: "VC_META_R"
             size: 1.5
-            code: -93
         }
-        KeyButton{
+        KeyButton {
             label: "Option"
+            code: "VC_ALT_R"
             size: 1.3
-            code: -18
         }
-        KeyButton{
+        KeyButton {
             label: "Control"
+            code: "VC_CONTROL_R"
             size: 1.3
-            code: -17
         }
-        KeyButton{
+        KeyButton {
             label: "◀"
+            code: "VC_LEFT"
             fontSize: 9
-            code: 37
         }
-        KeyButtonArrow{
+        Column {
+
+            property double size: 1
+
+            width: parent.width * (size / parent.size)
+            height: parent.height
+            spacing: 3
+
+            Item {
+                width: parent.width
+                height: (parent.height - parent.spacing) * 0.5
+                KeyContent {
+                    label: "▲"
+                    code: "VC_UP"
+                    fontSize: 9
+                    anchors.bottomMargin: 0
+                }
+            }
+            Item {
+                width: parent.width
+                height: (parent.height - parent.spacing) * 0.5
+                KeyContent {
+                    label: "▼"
+                    code: "VC_DOWN"
+                    fontSize: 9
+                    anchors.topMargin: 0
+                }
+            }
         }
-        KeyButton{
+        KeyButton {
             label: "▶"
+            code: "VC_RIGHT"
             fontSize: 9
-            code: 39
         }
     }
 }

@@ -15,7 +15,7 @@ func TestKeyStat(t *testing.T) {
 		switch ev.Kind {
 		case hook.KeyUp:
 			key := KeyCodeMap[ev.Keycode]
-			keyStat.Record(key)
+			keyStat.record(key)
 			println(key)
 		}
 	}

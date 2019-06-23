@@ -29,20 +29,28 @@ func (s *KeyItem) culCount(minute int) (count int) {
 }
 
 type KeyStat struct {
-	Minutes int
-	keyMap  map[string]int
-	statMap map[string]*KeyItem
+	Minutes  int
+	maxCount int
+	keyMap   map[string]int
+	statMap  map[string]*KeyItem
 }
 
 func NewKeyStat() *KeyStat {
-	return &KeyStat{
-		Minutes: 60,
-		keyMap:  make(map[string]int),
-		statMap: make(map[string]*KeyItem),
+	ks := &KeyStat{
+		Minutes:  60,
+		maxCount: 20,
+		keyMap:   make(map[string]int),
+		statMap:  make(map[string]*KeyItem),
 	}
+	go func() {
+		for range time.Tick(time.Second * 20) {
+			ks.flush()
+		}
+	}()
+	return ks
 }
 
-func (k *KeyStat) Record(key string) {
+func (k *KeyStat) record(key string) {
 	stat := k.statMap[key]
 	if stat == nil {
 		stat = &KeyItem{name: key, minuteMap: make(map[int]int)}
@@ -52,9 +60,30 @@ func (k *KeyStat) Record(key string) {
 	// flush count
 	newCount := stat.culCount(k.Minutes)
 	k.keyMap[key] = newCount
-	goxui.TriggerEvent("count_change_"+stat.name, newCount)
+	if k.maxCount < newCount {
+		k.maxCount = newCount
+		k.flush()
+	} else {
+		goxui.TriggerEvent(key, float64(newCount)/float64(k.maxCount))
+	}
 }
 
-func (k *KeyStat) GetStat(key string) int {
-	return k.keyMap[key]
+func (k *KeyStat) flush() {
+	var maxCount int
+	for _, count := range k.keyMap {
+		if maxCount < count {
+			maxCount = count
+		}
+	}
+	for key, count := range k.keyMap {
+		goxui.TriggerEvent(key, float64(count)/float64(k.maxCount))
+	}
+}
+
+func (k *KeyStat) GetScore(key string) float64 {
+	count := k.keyMap[key]
+	if k.maxCount <= 0 {
+		return 0
+	}
+	return float64(count) / float64(k.maxCount)
 }

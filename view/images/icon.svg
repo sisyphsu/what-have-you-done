@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="108px" height="108px" viewBox="0 0 108 108" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>iconfinder_record-tape-logo_2201718</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="83.7972184%" y1="86.2424664%" x2="16.1987019%" y2="13.7518776%" id="linearGradient-1">
+            <stop stop-color="#000002" offset="0%"></stop>
+            <stop stop-color="#343333" offset="50%"></stop>
+            <stop stop-color="#343333" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="72.365814%" y1="-18.8323256%" x2="27.635814%" y2="118.832791%" id="linearGradient-2">
+            <stop stop-color="#E5E6E5" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="iconfinder_record-tape-logo_2201718">
+            <path d="M1.2,51.3 L51.3,1.2 C52.8,-0.3 55.2,-0.3 56.7,1.2 L106.8,51.3 C108.3,52.8 108.3,55.2 106.8,56.7 L56.7,106.8 C55.2,108.3 52.8,108.3 51.3,106.8 L1.2,56.7 C-0.3,55.2 -0.3,52.8 1.2,51.3 Z" id="Path" fill="url(#linearGradient-1)"></path>
+            <path d="M1.6,51.7 L51.7,1.6 C53,0.3 55,0.3 56.3,1.6 L106.4,51.7 C107.7,53 107.7,55 106.4,56.3 L56.3,106.4 C55,107.7 53,107.7 51.7,106.4 L1.6,56.3 C0.4,55 0.4,53 1.6,51.7 Z M2,52.2 C1,53.2 1,54.9 2,55.9 L52.2,106 C53.2,107 54.9,107 55.9,106 L106,55.8 C107,54.8 107,53.1 106,52.1 L55.8,2 C54.8,1 53.1,1 52.1,2 L2,52.2 Z" id="Shape" fill="#FFFFFF" opacity="0.6"></path>
+            <path d="M54,76.1 C66.2,76.1 76.1,66.2 76.1,54 C76.1,41.8 66.2,31.9 54,31.9 C41.8,31.9 31.9,41.8 31.9,54 C31.9,66.2 41.8,76.1 54,76.1 Z" id="Path" fill="#373435"></path>
+            <path d="M54,75.5 C65.8,75.5 75.5,65.9 75.5,54 C75.5,42.2 65.9,32.5 54,32.5 C42.1,32.5 32.5,42.2 32.5,54 C32.5,65.8 42.2,75.5 54,75.5 Z" id="Path" fill="url(#linearGradient-2)"></path>
+        </g>
+    </g>
+</svg>

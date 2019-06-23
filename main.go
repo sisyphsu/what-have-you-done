@@ -12,8 +12,6 @@ func main() {
 	goxui.Init()
 	root := control.NewRoot()
 	goxui.BindObject(root)
-	goxui.StartRelative("view/StartDev.qml")
+	goxui.StartRelative("view/Start.qml")
 	root.Close()
-
-	// goxui need release HotKey to avoid "exitsyscall: syscall frame is no longer valid"
 }

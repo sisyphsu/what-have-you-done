@@ -4,17 +4,22 @@ import Goxui 1.0
 
 Window {
     visible: true
-    width: 960
-    height: 480
+    width: 980
+    height: 297
+    minimumWidth: width
+    minimumHeight: height
+    maximumWidth: width
+    maximumHeight: height
     title: qsTr("what have you done")
     Loader {
         id: loader
         anchors.fill: parent
         source: "Main.qml"
         function reload() {
-            // system.clearComponentCache();
-            source = "";
-            source = "Main.qml";
+            console.info("reload Main.qml");
+            loader.source = "";
+            system.clearComponentCache();
+            loader.source = "Main.qml";
         }
     }
     HotKey {
