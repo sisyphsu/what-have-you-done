@@ -19,7 +19,7 @@ Window {
 
     SystemTrayIcon {
         visible: true
-        iconSource: "./images/icon.svg"
+        iconSource: "images/icon.png"
         menu: Menu {
             MenuItem {
                 text: qsTr("Quit")

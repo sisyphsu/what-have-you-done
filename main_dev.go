@@ -13,5 +13,6 @@ func main() {
 	root := control.NewRoot()
 	goxui.BindObject(root)
 	goxui.StartRelative("view/Start.qml")
+
 	root.Close()
 }
