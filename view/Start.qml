@@ -1,7 +1,7 @@
 import QtQuick 2.12
-import Goxui 1.0
 import QtQuick.Window 2.12
 import Qt.labs.platform 1.1
+import Goxui 1.0
 
 Window {
     id: root
@@ -17,6 +17,11 @@ Window {
     flags: Qt.FramelessWindowHint
     title: qsTr("what have you done")
 
+    Component.onCompleted: {
+        x = Screen.width / 2 - width / 2
+        y = Screen.height / 2 - height / 2
+    }
+
     Main {
     }
 
@@ -25,7 +30,8 @@ Window {
         iconSource: "images/icon.png"
         menu: Menu {
             MenuItem {
-                text: (root.active ? "Hide" : "Show") + "(cmd+shift+V)"
+                text: root.active ? "Hide" : "Show"
+                shortcut: "Ctrl+Shift+V"
                 onTriggered: root.triggle()
             }
             MenuSeparator {

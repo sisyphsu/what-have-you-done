@@ -7,7 +7,7 @@ Item {
     id: root
 
     property color front: "#2a2c2f"
-    property color background: "#e1e1e1"
+    property color background: "#f2f4f6"
     property string label: ""
     property string code: ""
 
